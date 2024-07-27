@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/generated/app_images.dart';
+import 'package:responsive_dashboard/views/widgets/drawer_item_list_view.dart';
 import 'package:responsive_dashboard/views/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -9,15 +10,18 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Column(
+      child: const Column(
         children: [
           UserInfoListTile(
             image: Assets.imagesAvatar2,
             title: 'Lekan Okeowo',
             subTitle: 'demo@gmail.com',
           ),
+          DrawerItemListView(),
         ],
       ),
     );
   }
 }
+
+

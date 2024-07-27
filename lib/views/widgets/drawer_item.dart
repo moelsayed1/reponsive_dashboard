@@ -16,7 +16,7 @@ class DrawerItem extends StatelessWidget {
       ),
       title: Text(
         drawerItemModel.title,
-        style: StylesApp.styleBold16,
+        style: StylesApp.styleSemiBold16,
       ),
     );
   }
