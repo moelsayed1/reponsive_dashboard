@@ -29,7 +29,6 @@ class AllExpensesItemListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Row(
       children: items.asMap().entries.map((e) {
         int index = e.key;
@@ -37,8 +36,13 @@ class AllExpensesItemListView extends StatelessWidget {
 
         return Expanded(
           child: Padding(
-            padding: index == 1 ? const EdgeInsets.symmetric(horizontal: 12) : EdgeInsets.zero, // Add padding only if index is 1
-            child: AllExpensesItem(itemModel: item),
+            padding: index == 1
+                ? const EdgeInsets.symmetric(horizontal: 12)
+                : EdgeInsets.zero, // Add padding only if index is 1
+            child: AllExpensesItem(
+              itemModel: item,
+              isSelected: false,
+            ),
           ),
         );
       }).toList(),
