@@ -3,10 +3,16 @@ import 'package:responsive_dashboard/models/all_expenses_item_model.dart';
 import 'package:responsive_dashboard/utils/generated/app_images.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses_item.dart';
 
-class AllExpensesItemListView extends StatelessWidget {
+class AllExpensesItemListView extends StatefulWidget {
   const AllExpensesItemListView({super.key});
 
-  static const items = [
+  @override
+  State<AllExpensesItemListView> createState() => _AllExpensesItemListViewState();
+}
+
+class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
+
+  final items = [
     AllExpensesItemModel(
       image: Assets.imagesMoneys,
       title: 'Balance',
@@ -27,6 +33,8 @@ class AllExpensesItemListView extends StatelessWidget {
     ),
   ];
 
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -39,13 +47,24 @@ class AllExpensesItemListView extends StatelessWidget {
             padding: index == 1
                 ? const EdgeInsets.symmetric(horizontal: 12)
                 : EdgeInsets.zero, // Add padding only if index is 1
-            child: AllExpensesItem(
-              itemModel: item,
-              isSelected: false,
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(index);
+              },
+              child: AllExpensesItem(
+                itemModel: item,
+                isSelected: selectedIndex == index,
+              ),
             ),
           ),
         );
       }).toList(),
     );
+  }
+
+  void updateIndex(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
