@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
+import 'package:responsive_dashboard/views/widgets/custom_text_field.dart';
 import 'package:responsive_dashboard/views/widgets/latest_transaction_list_view.dart';
 
 class LatestTransaction extends StatelessWidget {
@@ -8,6 +9,7 @@ class LatestTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Latest Transaction',
@@ -17,6 +19,10 @@ class LatestTransaction extends StatelessWidget {
           height: 12,
         ),
         LatestTransactionListView(),
+        Divider(
+          height: 48,
+        ),
+        CustomTextField(),
       ],
     );
   }
