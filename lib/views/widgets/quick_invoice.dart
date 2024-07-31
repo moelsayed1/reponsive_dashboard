@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/widgets/custom_background_container.dart';
+import 'package:responsive_dashboard/views/widgets/quick_invoice_header.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -7,7 +8,7 @@ class QuickInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
-      child: SizedBox(),
+      child: QuickInvoiceHeader(),
     );
   }
 }
