@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
-import 'package:responsive_dashboard/views/widgets/custom_text_field.dart';
 import 'package:responsive_dashboard/views/widgets/latest_transaction_list_view.dart';
+import 'package:responsive_dashboard/views/widgets/quick_invoice_form.dart';
 
 class LatestTransaction extends StatelessWidget {
   const LatestTransaction({super.key});
@@ -21,8 +21,12 @@ class LatestTransaction extends StatelessWidget {
         LatestTransactionListView(),
         Divider(
           height: 48,
+          color: Color(0xffF1F1F1),
         ),
-        CustomTextField(),
+        QuickInvoiceForm(),
+        SizedBox(
+          height: 24,
+        ),
       ],
     );
   }
