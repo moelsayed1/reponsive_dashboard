@@ -17,7 +17,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
       image: Assets.imagesMoneys,
       title: 'Balance',
       date: 'April 2022',
-      price: r'$20,129',
+      price: r'$100,000',
     ),
     const AllExpensesItemModel(
       image: Assets.imagesIncome,
