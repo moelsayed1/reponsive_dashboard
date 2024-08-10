@@ -9,21 +9,28 @@ class TransactionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        transactionHistory.title,
-        style: StylesApp.styleSemiBold16,
+    return Card(
+      elevation: 0,
+      color: const Color(0xFFFAFAFA),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
       ),
-      subtitle: Text(
-        transactionHistory.date,
-        style: StylesApp.styleRegular16.copyWith(
-          color: const Color(0xffAAAAAA),
+      child: ListTile(
+        title: Text(
+          transactionHistory.title,
+          style: StylesApp.styleSemiBold16,
         ),
-      ),
-      trailing: Text(
-        transactionHistory.amount,
-        style: StylesApp.styleSemiBold20.copyWith(
-          color: transactionHistory.isWithdrawal ? const Color(0xffF3735E) : const Color(0xff7DD97B),
+        subtitle: Text(
+          transactionHistory.date,
+          style: StylesApp.styleRegular16.copyWith(
+            color: const Color(0xffAAAAAA),
+          ),
+        ),
+        trailing: Text(
+          transactionHistory.amount,
+          style: StylesApp.styleSemiBold20.copyWith(
+            color: transactionHistory.isWithdrawal ? const Color(0xffF3735E) : const Color(0xff7DD97B),
+          ),
         ),
       ),
     );
