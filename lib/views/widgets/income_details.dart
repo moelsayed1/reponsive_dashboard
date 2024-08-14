@@ -24,7 +24,7 @@ class IncomeDetails extends StatelessWidget {
     ItemDetailsModel(
       color: Color(0xffE2DECD),
       title: 'Other',
-      value: '20%',
+      value: '22%',
     ),
   ];
 
