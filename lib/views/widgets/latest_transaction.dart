@@ -13,17 +13,17 @@ class LatestTransaction extends StatelessWidget {
       children: [
         Text(
           'Latest Transaction',
-          style: StylesApp.styleMedium16,
+          style: StylesApp.styleMedium16(context),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
-        LatestTransactionListView(),
-        Divider(
+        const LatestTransactionListView(),
+        const Divider(
           height: 48,
           color: Color(0xffF1F1F1),
         ),
-        QuickInvoiceForm(),
+        const QuickInvoiceForm(),
       ],
     );
   }

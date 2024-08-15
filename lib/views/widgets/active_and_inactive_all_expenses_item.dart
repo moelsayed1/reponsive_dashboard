@@ -14,11 +14,11 @@ class InActiveAllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: BorderSide(
+          side: const BorderSide(
             color: Color(0xFFF1F1F1),
             width: 1,
           ),
@@ -31,26 +31,26 @@ class InActiveAllExpensesItem extends StatelessWidget {
           AllExpensesItemHeader(
             allExpensesItemModel: itemModel,
           ),
-          SizedBox(
+          const SizedBox(
             height: 34,
           ),
           Text(
             itemModel.title,
-            style: StylesApp.styleSemiBold16,
+            style: StylesApp.styleSemiBold16(context),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(
             itemModel.date,
-            style: StylesApp.styleRegular14,
+            style: StylesApp.styleRegular14(context),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             itemModel.price,
-            style: StylesApp.styleSemiBold24,
+            style: StylesApp.styleSemiBold24(context),
           ),
         ],
       ),
@@ -69,9 +69,9 @@ class ActiveAllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
-        color: Color(0xff4EB7F2),
+        color: const Color(0xff4EB7F2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
@@ -84,30 +84,30 @@ class ActiveAllExpensesItem extends StatelessWidget {
             imageColor: Colors.white,
             allExpensesItemModel: itemModel,
           ),
-          SizedBox(
+          const SizedBox(
             height: 34,
           ),
           Text(
             itemModel.title,
-            style: StylesApp.styleSemiBold16.copyWith(
+            style: StylesApp.styleSemiBold16(context).copyWith(
               color: Colors.white,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(
             itemModel.date,
-            style: StylesApp.styleRegular14.copyWith(
-              color: Color(0xffFAFAFA),
+            style: StylesApp.styleRegular14(context).copyWith(
+              color: const Color(0xffFAFAFA),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             itemModel.price,
-            style: StylesApp.styleSemiBold24.copyWith(
+            style: StylesApp.styleSemiBold24(context).copyWith(
               color: Colors.white,
             ),
           ),

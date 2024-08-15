@@ -12,11 +12,11 @@ class MyCard extends StatelessWidget {
       aspectRatio: 420 / 215,
       child: Container(
         decoration: ShapeDecoration(
-          image: DecorationImage(
+          image: const DecorationImage(
             fit: BoxFit.fill,
             image: AssetImage(Assets.imagesBackgroundCard),
           ),
-          color: Color(0xff4EB7F2),
+          color: const Color(0xff4EB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
@@ -25,20 +25,20 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              contentPadding: EdgeInsets.only(left: 31, right: 42, top: 16),
+              contentPadding: const EdgeInsets.only(left: 31, right: 42, top: 16),
               title: Text(
                 'Name card',
-                style: StylesApp.styleRegular16.copyWith(
+                style: StylesApp.styleRegular16(context).copyWith(
                   color: Colors.white,
                 ),
               ),
               subtitle: Text(
                 'Syah Bandi',
-                style: StylesApp.styleMedium20,
+                style: StylesApp.styleMedium20(context),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
-            Expanded(
+            const Expanded(
               child: SizedBox(),
             ),
             Padding(
@@ -48,20 +48,20 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: StylesApp.styleSemiBold24.copyWith(
+                    style: StylesApp.styleSemiBold24(context).copyWith(
                       color: Colors.white,
                     ),
                   ),
                   Text(
                     '12/20 - 124',
-                    style: StylesApp.styleRegular16.copyWith(
+                    style: StylesApp.styleRegular16(context).copyWith(
                       color: Colors.white,
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 27,
             ),
           ],

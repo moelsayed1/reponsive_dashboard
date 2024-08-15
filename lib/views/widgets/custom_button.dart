@@ -17,12 +17,12 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           elevation: 0,
-          backgroundColor: backgroundColor ?? Color(0xff4EB7F2),
+          backgroundColor: backgroundColor ?? const Color(0xff4EB7F2),
         ),
         onPressed: () {},
         child: Text(
           text,
-          style: StylesApp.styleSemiBold18.copyWith(
+          style: StylesApp.styleSemiBold18(context).copyWith(
             color: textColor,
           ),
         ),

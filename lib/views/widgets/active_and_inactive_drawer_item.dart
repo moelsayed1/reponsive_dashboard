@@ -19,7 +19,7 @@ class ActiveDrawerItem extends StatelessWidget {
       ),
       title: Text(
         drawerItemModel.title,
-        style: StylesApp.styleBold16,
+        style: StylesApp.styleBold16(context),
       ),
 
       trailing: Container(
@@ -47,7 +47,7 @@ class InActiveDrawerItem extends StatelessWidget {
       ),
       title: Text(
         drawerItemModel.title,
-        style: StylesApp.styleSemiBold16,
+        style: StylesApp.styleSemiBold16(context),
       ),
     );
   }

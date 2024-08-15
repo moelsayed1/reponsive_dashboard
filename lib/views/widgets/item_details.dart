@@ -20,11 +20,11 @@ class ItemDetails extends StatelessWidget {
       ),
       title: Text(
         itemDetailsModel.title,
-        style: StylesApp.styleRegular16,
+        style: StylesApp.styleRegular16(context),
       ),
       trailing: Text(
         itemDetailsModel.value,
-        style: StylesApp.styleMedium16.copyWith(
+        style: StylesApp.styleMedium16(context).copyWith(
           color: const Color(0xff208CC8),
         ),
       ),
